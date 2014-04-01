@@ -12,7 +12,7 @@ public class MathRondom {
 	public static void main(String[] args) {
 		telefone();
 	}
-	private static void testaNome() {
+	private static void testaNome() {  
 		Random random = new Random();
 		
 		List<String> nomesUsados = new ArrayList<String>();
