@@ -13,6 +13,7 @@ public class MathRondom {
 		telefone();
 	}
 	private static void testaNome() {  
+		
 		Random random = new Random();
 		
 		List<String> nomesUsados = new ArrayList<String>();
