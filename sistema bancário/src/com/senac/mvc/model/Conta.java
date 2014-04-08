@@ -65,10 +65,12 @@ public class Conta {
 	}
 
 	public String getExtrato() {
-		String extrato = "\tEXTRATO " + "\n Nome: " + this.cliente.getNome()
+		String extrato = "---------------- EXTRATO -------------" 
+				+ "\n Nome: " + this.cliente.getNome()
 				+ "\n Número da conta: " + getConta()
-				+ "\n Saldo atual: %.2f\n" + getSaldo()
-				+ "\n Saques realizados hoje: " + getSaques() + "\n";
+				+ "\n Saldo atual: " + getSaldo()
+				+ "\n Saques realizados hoje: " + getSaques()
+				+ "\n---------------------------------------------\n";
 		return extrato;
 	}
 }

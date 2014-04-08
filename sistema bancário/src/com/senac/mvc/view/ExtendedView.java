@@ -11,6 +11,10 @@ public class ExtendedView extends ContaSimplesView {
 	Scanner entrada = new Scanner(System.in);
 	Controller controller;
 
+	public ExtendedView(Controller controller) {
+		this.controller = controller;
+	}
+
 	public void exibeExtrato() {
 		String extrato = controller.exibeExtrato();
 		System.out.println(extrato);
@@ -39,7 +43,7 @@ public class ExtendedView extends ContaSimplesView {
 		double valor;
 		switch (opcao) {
 		case 1:
-			controller.exibeExtrato();
+			exibeResultado(controller.exibeExtrato());
 			break;
 		case 2:
 			System.out.print("Quanto deseja sacar: ");
@@ -58,5 +62,9 @@ public class ExtendedView extends ContaSimplesView {
 		default:
 			System.out.println("Opção inválida");
 		}
+	}
+
+	private void exibeResultado(String resultado) {
+		System.out.println(resultado);
 	}
 }

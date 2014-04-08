@@ -12,6 +12,7 @@ public class Controller {
 
 	public Controller(Cliente cliente, Conta conta) {
 		this.cliente = cliente;
+		this.conta = conta;
 	}
 
 	public String exibeExtrato() {

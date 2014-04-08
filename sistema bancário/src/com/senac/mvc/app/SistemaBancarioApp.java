@@ -3,6 +3,7 @@ package com.senac.mvc.app;
 import com.senac.mvc.controller.Controller;
 import com.senac.mvc.model.Cliente;
 import com.senac.mvc.model.Conta;
+import com.senac.mvc.view.ExtendedView;
 
 
 public class SistemaBancarioApp {
@@ -17,7 +18,10 @@ public class SistemaBancarioApp {
 		conta.setSaldo(1000);
 		conta.setCliente(cliente);
 		
-		new Controller(cliente, conta);
+		Controller controller = new Controller(cliente, conta);
+		
+		ExtendedView view = new ExtendedView(controller);
+		view.iniciar();
 		
 	}
 	
